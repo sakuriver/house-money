@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script type="text/javascript">
+      function welcomePush() {
+        Push.create("こんにちは！", {
+          body: "更新をお知らせします！",
+          icon: "icon.png",
+          timeout: 8000, //通知が消えるタイミング
+          vibrate: [100, 100, 100], //モバイル端末でのバイブレーション秒数
+          onClick: function() {
+            //通知がクリックされた場合の設定
+            console.log(this);
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>支払い金額表示ページ</h1>
+    <h2><a href="https://g2jgx.csb.app/information_list.html">お知らせ</a></h2>
+    <h3>2020/03/18 4月イオン分について更新をいたしました</h3>
+    <h3>2020/03/19 4月日専連文について、更新をいたしました</h3>
+    <input type="button" value="更新" onclick="window.location.reload();" />
+    <ul>
+      <li><h3><a href="https://g2jgx.csb.app/2020_02.html">2020年2月</a></h3></li>
+      <li><h3><a href="https://g2jgx.csb.app/2020_03.html">2020年3月</a></h3></li>
+      <li><h3><a href="https://g2jgx.csb.app/2020_04.html">2020年4月</a></h3></li>
+    </ul>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <input type="button" value="お知らせ" onClick="welcomePush()"></button>
+  </body>
+</html>
